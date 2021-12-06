@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: job-services
+server:
+  port: 8080
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
