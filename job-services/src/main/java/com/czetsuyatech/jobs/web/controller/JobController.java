@@ -14,7 +14,7 @@ public class JobController {
 
   private final ApplicantProxy applicantProxy;
 
-  @GetMapping("/jobs-with-applicant-profiles")
+  @GetMapping("/job-with-applicant-profiles")
   public ResponseEntity listJobsWithApplicantProfiles() {
 
     JobWithApplicantsDto result = new JobWithApplicantsDto();
