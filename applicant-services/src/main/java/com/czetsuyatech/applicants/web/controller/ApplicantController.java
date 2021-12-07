@@ -1,4 +1,4 @@
-package com.czetsuyatech.applicant.web.controller;
+package com.czetsuyatech.applicants.web.controller;
 
 import java.util.Arrays;
 import java.util.List;
@@ -10,6 +10,6 @@ public class ApplicantController {
 
   @GetMapping("/applicants-by-job")
   public List<String> getApplicantsByJob() {
-    return Arrays.asList("Kira", "Lacus", "Maryu");
+    return Arrays.asList("Steve", "Bill", "Linus");
   }
 }

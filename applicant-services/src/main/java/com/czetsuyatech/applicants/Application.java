@@ -1,4 +1,4 @@
-package com.czetsuyatech.applicant;
+package com.czetsuyatech.applicants;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
