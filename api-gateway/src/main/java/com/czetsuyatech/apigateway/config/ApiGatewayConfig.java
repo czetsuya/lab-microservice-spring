@@ -12,10 +12,13 @@ public class ApiGatewayConfig {
   public RouteLocator gatewayRouter(RouteLocatorBuilder builder) {
 
     return builder.routes()
+        .route(p -> p
+            .path("/get")
+            .uri("http://httpbin.org"))
         .route(p -> p.path("/applicants/**")
-            .uri("lb://applicants"))
+            .uri("lb://applicant-services"))
         .route(p -> p.path("/jobs/**")
-            .uri("lb://jobs"))
+            .uri("lb://job-services"))
         .build();
   }
 }

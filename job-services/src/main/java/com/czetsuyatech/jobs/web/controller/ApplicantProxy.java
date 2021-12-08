@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 @FeignClient(name = "applicant-services")
 public interface ApplicantProxy {
 
-  @GetMapping("/applicants-by-job")
+  @GetMapping("/applicants/applicants-by-job")
   List<String> getApplicantsByJob();
 }

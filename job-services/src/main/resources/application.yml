@@ -3,6 +3,8 @@ spring:
     name: job-services
 server:
   port: 8080
+  servlet:
+    context-path: /jobs
 eureka:
   client:
     serviceUrl:
