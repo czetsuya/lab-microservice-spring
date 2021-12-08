@@ -17,6 +17,8 @@ public class JobController {
   @GetMapping("/job-with-applicant-profiles")
   public ResponseEntity listJobsWithApplicantProfiles() {
 
+    log.debug("get job details with applicants");
+
     JobWithApplicantsDto result = new JobWithApplicantsDto();
     result.setJob("Java Developer");
 
