@@ -14,3 +14,14 @@ logging:
   level:
     root: INFO
     com.czetsuyatech: DEBUG
+
+resilience4j:
+  circuitbreaker:
+    metrics:
+      enabled: true
+  retry:
+    instances:
+      default:
+        maxRetryAttempts: 5
+        waitDuration: 1
+        enableExponentialBackoff: true

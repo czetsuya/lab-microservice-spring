@@ -26,4 +26,17 @@ public class JobController {
 
     return ResponseEntity.ok().body(result);
   }
+
+  @GetMapping("/job-with-top-applicants")
+  public ResponseEntity listJobsWithTopApplicants() {
+
+    log.debug("get job details with applicants");
+
+    JobWithApplicantsDto result = new JobWithApplicantsDto();
+    result.setJob("AWS Solutions Architect");
+
+    result.setApplicants(applicantProxy.getTopApplicantsByJob());
+
+    return ResponseEntity.ok().body(result);
+  }
 }
