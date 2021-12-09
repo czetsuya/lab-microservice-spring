@@ -4,6 +4,7 @@ import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import java.util.Arrays;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,10 +14,13 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class ApplicantController {
 
+  @Value("${server.port}")
+  private int port;
+
   @GetMapping("/applicants-by-job")
   public List<String> getApplicantsByJob() {
 
-    log.debug("get applicants by job");
+    log.debug("port={} get applicants by job", port);
     return Arrays.asList("Steve", "Bill", "Linus");
   }
 
@@ -25,7 +29,7 @@ public class ApplicantController {
   @GetMapping("/top-applicants-by-job")
   public List<String> getTopApplicantsByJob() {
 
-    log.debug("get top applicants by job");
+    log.debug("port={} get top applicants by job", port);
 
     ResponseEntity<String> result = new RestTemplate().getForEntity("http://localhost:8000/circuit-breaker",
         String.class);
@@ -36,7 +40,7 @@ public class ApplicantController {
 
   public List<String> getTopApplicantsByJobDefault(Exception e) {
 
-    log.debug("default top applicant");
-    return Arrays.asList("Ed from circruit breaker");
+    log.debug("port={} default top applicant", port);
+    return Arrays.asList("Ed from circuit breaker");
   }
 }
