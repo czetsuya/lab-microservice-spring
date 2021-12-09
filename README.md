@@ -1,5 +1,9 @@
 # Microservice Architecture with Spring
 
+
+
+![Microservice Architecture with Spring](./docs/architecture.png)
+
 ## Services URLs
 
 ### Applicant Services
