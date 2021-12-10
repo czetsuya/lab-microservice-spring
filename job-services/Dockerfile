@@ -1,7 +1,7 @@
 FROM openjdk:11
 
 VOLUME /tmp
-EXPOSE 8000
+EXPOSE 8080
 ADD target/*.jar app.jar
 ENV JAVA_OPTS=""
 
