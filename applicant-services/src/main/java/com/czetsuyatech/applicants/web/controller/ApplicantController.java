@@ -1,6 +1,6 @@
 package com.czetsuyatech.applicants.web.controller;
 
-import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
 import java.util.Arrays;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
@@ -24,8 +24,8 @@ public class ApplicantController {
     return Arrays.asList("Steve", "Bill", "Linus");
   }
 
-  //  @Retry(name = "default", fallbackMethod = "getTopApplicantsByJobDefault")
-  @CircuitBreaker(name = "default", fallbackMethod = "getTopApplicantsByJobDefault")
+  @Retry(name = "default", fallbackMethod = "getTopApplicantsByJobDefault")
+  //  @CircuitBreaker(name = "default", fallbackMethod = "getTopApplicantsByJobDefault")
   @GetMapping("/top-applicants-by-job")
   public List<String> getTopApplicantsByJob() {
 

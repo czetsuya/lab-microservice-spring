@@ -131,7 +131,17 @@ As we can see in the logs, it started from api-gateway, pass thru job-services, 
 
 ![Log trace](./docs/log_trace.jpg)
 
-## Services URLs
+## Docker Builds
+
+```docker
+docker build -t czetsuyatech/api-gateway:latest .
+docker build -t czetsuyatech/applicant-services:latest .
+docker build -t czetsuyatech/job-services:latest .
+docker build -t czetsuyatech/naming-server:latest .
+
+```
+
+## Service URLs
 
 ### Eureka Server
 http://localhost:8761
