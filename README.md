@@ -134,18 +134,18 @@ As we can see in the logs, it started from api-gateway, pass thru job-services, 
 ## Services URLs
 
 ### Eureka Server
-- http://localhost:8761
+http://localhost:8761
 
 ### Applicant Services
-- http://localhost:8081/applicants/applicants-by-job
-- http://localhost:8081/applicants/top-applicants-by-job
+http://localhost:8081/applicants/applicants-by-job
+http://localhost:8081/applicants/top-applicants-by-job
 
 ### Job Services
-- http://localhost:8080/jobs/job-with-applicant-profiles
-- http://localhost:8080/jobs/job-with-top-applicants
+http://localhost:8080/jobs/job-with-applicant-profiles
+http://localhost:8080/jobs/job-with-top-applicants
 
 ### API Gateway
-- http://localhost:8000/applicants/applicants-by-job
-- http://localhost:8000/applicants/top-applicants-by-job
-- http://localhost:8000/jobs/job-with-applicant-profiles
-- http://localhost:8000/jobs/job-with-top-applicants
+http://localhost:8000/applicants/applicants-by-job
+http://localhost:8000/applicants/top-applicants-by-job
+http://localhost:8000/jobs/job-with-applicant-profiles
+http://localhost:8000/jobs/job-with-top-applicants
