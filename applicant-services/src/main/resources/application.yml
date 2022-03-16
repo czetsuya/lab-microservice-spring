@@ -23,5 +23,5 @@ resilience4j:
     instances:
       default:
         maxRetryAttempts: 5
-        waitDuration: 1
+        waitDuration: 500
         enableExponentialBackoff: true

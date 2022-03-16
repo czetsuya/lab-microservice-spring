@@ -11,5 +11,5 @@ public interface ApplicantProxy {
   List<String> getApplicantsByJob();
 
   @GetMapping("/applicants/top-applicants-by-job")
-  public List<String> getTopApplicantsByJob();
+  List<String> getTopApplicantsByJob();
 }
